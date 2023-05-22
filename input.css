@@ -1,0 +1,2414 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F2F5F9;
+    background-image: url('../img/background-pasywisx.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow-x: hidden;
+}
+select {
+    @apply relative rounded-[0px] bg-transparent select-backwards focus:text-[#9229E5] focus:border-[#9229E5] text-left pl-3 border-b border-[#C4C4C4] block w-full py-[0.6rem] text-xs md:text-sm lg:text-base font-medium uppercase outline-0
+}
+select select {
+    display: none
+}
+  
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 16px;
+    right: 10px;
+    width: 13px;
+    height: 8px;
+    background: url('../img/select-arrow.png');
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+  }
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+    transform: rotate(0deg);
+  }
+  .select-selected.select-arrow-active {
+    @apply text-[#9229E5] !border-[#9229E5]
+  }
+
+  /*style the items (options), including the selected item:*/
+  .select-items div,.select-selected {
+    @apply text-[16px] leading-[19px];
+    padding: 20px 23px;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+  }
+  /*style items (options):*/
+  .select-items {
+    @apply bg-white border border-white rounded-[10px];
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    margin-top: 21px;
+    overflow: hidden;
+  }
+  
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+ 
+  .select-selected, .custom-select .select-selected {
+    @apply relative bg-transparent select-backwards focus:text-[#9229E5] focus:border-[#9229E5] text-left pl-0 border-b border-[#C4C4C4] block w-full py-[0.6rem] text-xs md:text-sm lg:text-base font-medium capitalize outline-0
+  }
+
+.hr-brown {
+    border-color: rgba(229, 229, 229, 0.5);
+}
+.select-backwards {
+    direction: rtl;
+}
+.gradient-violet {
+    background: linear-gradient(0deg, #BE8EE6 -11.85%, #9229E5 100%);
+}
+.gradient-silver {
+    background: linear-gradient(123.31deg, #A8B2B9 7.13%, #FFFFFF 195.84%);
+    
+}
+.border-color-custom-gray {
+    border-color:rgba(215, 215, 215, 0.8);
+}
+.background-silver-custom {
+    background: #8989891a;
+}
+.select-custom-arrow {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 25px;
+    background-repeat: no-repeat;
+}
+.remove-select-icon {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.remove-select-icon::-ms-expand {
+    display: none;
+}
+.button-check-item.active {
+    background: transparent !important;
+    color: #8000E5;
+    border-color: #8000E5 !important;
+}
+.long-shadow {
+    box-shadow: 3px 27px 27px -9px rgba(208,207,207,0.75);
+-webkit-box-shadow: 3px 27px 27px -9px rgba(208,207,207,0.75);
+-moz-box-shadow: 3px 27px 27px -9px rgba(208,207,207,0.75);
+}
+
+  input:checked + div svg {
+    @apply !block !visible;
+  }
+ /* */ 
+  input[type="radio"] + label span {
+    transition: all .2s,
+      transform .2s;
+}
+input {
+    @apply bg-transparent
+}
+
+input[type="radio"]:checked + label span {
+  background-color: #8000E5;
+  box-shadow: 0px 0px 0px 2px white inset;
+}
+
+input[type="radio"]:checked + label{
+   color: #8000E5;
+}
+/* */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+.js_tap_btn.done, .js_tap_btn.active {
+color: #333333 !important;
+}
+.js_tap_btn.done span {
+    background-color: #BE8EE6 !important;
+    color: #8000E5 !important;
+}
+.js_tap_btn.active span {
+    background-color: #8000E5 !important;
+    color: white !important;
+}
+.bg-white-transparent {
+    background: rgba(255, 255, 255, 0.5);
+}
+.accordion-button.active .accordion-content {
+    display: block !important;
+    visibility: visible !important
+}
+.accordion-button.active .active-icon {
+    display: none;
+}
+.accordion-button.active .inactive-icon {
+    display: block !important;
+    visibility: visible !important
+}
+input[type="radio"].radio-box:checked + label {
+    color: black !important;
+    border-color: #8000E5 !important;
+    border-width: 2px !important;
+    background: transparent !important;
+}
+input[type="radio"].radio-box:checked + label span {
+    background: transparent !important;
+}
+input[type="radio"].radio-box:checked + label span.span-background-important {
+    background-color: #EBDCFF !important;
+}
+input[type="radio"].radio-box:checked + label span.span-background-important2 {
+    background-color: #8000E5 !important;
+}
+
+/* */ 
+.main-sidebar {
+    @apply hidden lg:!block lg:!visible max-w-[250px] lg:border-r xxl:max-w-[384px] w-full;
+    border-color: rgba(215, 215, 215, 0.8);
+}
+.main-sidebar .brand {
+    @apply block px-6 py-4 md:pl-6 xxl:px-[53px] md:pt-[77px] md:pb-[84px];
+}
+.main-sidebar .link-bot {
+    @apply md:mt-[190px] py-4 px-6 md:px-[24px] xxl:px-[50px]
+}
+/* */
+.sidebar-list {
+    @apply pr-8 md:pr-[24px] xl:pr-[50px] mb-36;
+}
+.sidebar-list li {
+    @apply mb-3;
+}
+.sidebar-list li a {
+    @apply hover:bg-[#000000]/5 flex justify-between items-center pl-6 xxl:pl-12 xxl:pl-[55px] w-full font-medium text-[#999999] text-base xxl:text-lg leading-5 py-3 lg:pt-[16px] lg:pb-[13px] pr-5 lg:pr-[22px];
+}
+.sidebar-list li a:hover {
+    border-radius: 0px 15px 15px 0px;
+}
+.sidebar-list li.active a {
+    background: #8000E5;
+    border-radius: 0px 15px 15px 0px;
+    color: white;
+    font-weight: 700;
+}
+.sidebar-list li a img {
+    @apply float-right inline scale-[0.8] xxl:scale-100;
+}
+.sidebar-list li.active img {
+    filter:brightness(0) invert(1);
+}
+/* */
+.btn-thumbnail {
+    @apply border-[3px] border-white w-full flex items-center mb-4 rounded-md bg-white text-black font-bold leading-5 px-[16px] py-[17px] cursor-pointer relative;
+}
+.btn-thumbnail img:first-of-type {
+    @apply mr-[15px];
+}
+.btn-thumbnail img:last-of-type {
+    @apply ml-auto;
+}
+.btn-grayscale {
+    @apply rounded-md flex bg-[#E7EAEC] text-[#999999] relative justify-center py-3 lg:pt-[18px] lg:pb-[15px];
+}
+.btn-grayscale img {
+    @apply absolute left-[5px] top-[12px] cursor-pointer;
+}
+/* */ 
+.main-content {
+    @apply px-4 sm:px-6 py-4 md:py-16 md:px-[50px] xxl:px-12 xxl:py-16 xxl:pl-[88px] xxl:pr-[66px] xxl:pt-[55px] xxl:pb-[84px];
+}
+.heading-top {
+    @apply grid grid-cols-3 lg:grid-cols-2;
+}
+.heading-top .left-side {
+    @apply col-span-2 md:col-span-1 flex items-center;
+}
+.heading-top .left-side h1 {
+    @apply font-normal text-lg sm:text-3xl md:text-5xl inline;
+}
+.heading-top .right-side {
+    @apply col-span-1 md:col-span-1 flex justify-end;
+}
+.select-icon {
+    @apply inline ml-4 lg:ml-[37px] min-w-[55px];
+}
+.select-icon img:first-of-type {
+    @apply inline;
+}
+.select-icon img:last-of-type {
+    @apply ml-[16px] inline;
+}
+.icon-list {
+    @apply inline-flex items-center;
+}
+.icon-list li {
+    @apply ml-[10px] lg:ml-[45px];
+}
+.icon-list li.active button {
+    position: relative;
+}
+.icon-list li.active button::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -2px;
+    right: -2px;
+    width: 8px;
+    height: 8px;
+    background: #D80027;
+    border-radius: 50%;
+}
+.icon-list li button {
+    @apply !rounded-full bg-transparent h-[40px] w-[40px] flex items-center justify-center
+}
+.icon-list li button:hover {
+    @apply !bg-[#DCDCDC]
+}
+.welcome-message {
+    @apply mt-[19px] mb-8 md:mb-10;
+}
+.welcome-message p {
+    @apply text-[#898989] text-lg font-normal;
+}
+.dashboard-wrapper {
+    @apply grid grid-cols-4 lg:grid-cols-12 md:mt-6 xl:mt-10 md:gap-4 xl:gap-10;
+    min-width: 100%;
+}
+.dashboard-wrapper .dashboard-wrapper-5 {
+    @apply col-span-12 lg:col-span-5 mb-8 md:mb-0;
+}
+.dashboard-wrapper .dashboard-wrapper-7 {
+    @apply col-span-12 lg:col-span-7 mb-8 md:mb-0;
+}
+.dashboard-wrapper .block-wrapper {
+    @apply bg-white/50 p-6 md:p-[20px] xl:p-[40px] rounded-lg relative border-2 border-white h-full;
+}
+.dashboard-wrapper .block-wrapper .close {
+    @apply absolute rounded-t-md top-[-20px] right-[20px] bg-white p-2 cursor-pointer hidden;
+}
+.dashboard-wrapper .block-wrapper:hover .close {
+    @apply !block !visible;
+}
+.dashboard-wrapper .block-wrapper.no-padding {
+    padding: 0 !important
+}
+.dashboard-wrapper-heading {
+    @apply font-semibold text-xs md:text-sm md:text-base uppercase text-[#898989];
+}
+.dashboard-wrapper-heading.text-white {
+    color: white !important
+}
+.btn-black {
+    @apply rounded-lg py-4 w-full bg-black text-white font-semibold uppercase text-base;
+}
+.btn-tabs-outline-violet {
+    @apply text-xs md:text-base font-semibold uppercase py-3 block w-full;
+}
+.btn-tabs-outline-violet.active-tab-btn {
+    color:#8000E5;
+    border: 1.5px solid #8000E5;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+.select-grayscale div.select-selected {
+    @apply background-silver-custom font-semibold text-xs md:text-sm rounded-lg p-2 md:py-3 md:px-4 !pr-10 select-custom-arrow uppercase;
+}
+.select-grayscale-no-icon div.select-selected {
+    @apply background-silver-custom font-semibold text-xs md:text-sm rounded-lg p-2 md:py-3 md:px-4 remove-select-icon !pr-4;
+}
+.select-grayscale-no-icon div.select-selected::after {
+    display: none !important;
+}
+.balance-block h2 {
+    @apply mb-10 text-white
+}
+.balance-block-tabs {
+    @apply grid grid-cols-2 mb-12;
+}
+.balance-block-tabs div {
+    @apply text-white text-base font-semibold;
+}
+.balance-block-tabs-control {
+    @apply text-right;
+}
+.balance-block-tabs-control button:last-of-type {
+    @apply ml-4;
+}
+.balance-block .balance-carousel-amount {
+    @apply text-white text-sm mb-8 ;
+}
+.balance-block .balance-carousel-amount {
+    @apply text-white text-sm mb-8 ;
+}
+.balance-block .balance-carousel-amount span:first-of-type {
+    @apply font-semibold text-3xl md:text-5xl mr-2 xl:mr-4;
+}
+.balance-block .balance-carousel-amount span:last-of-type {
+    @apply font-normal;
+}
+.button-select-with-image {
+    @apply inline-flex items-center w-full border-b border-[#C4C4C4] py-3 text-white text-xs md:text-base font-medium;
+}
+.button-select-with-image img {
+    @apply inline mr-2;
+}
+.balance-block .select-text {
+    @apply font-medium text-white text-xs mt-3;
+}
+.tabs-block .tabs-block-controls {
+    @apply grid grid-cols-2 text-center mb-8 gap-8;
+}
+.tabs-block .btn-tab-container {
+
+}
+.input-group {
+    @apply grid grid-cols-2 mb-8 gap-8;
+}
+.input-group-with-select {
+    @apply grid grid-cols-12 mb-8 items-end
+}
+.input-group-with-select .left-side {
+    @apply col-span-9 md:col-span-10
+}
+.input-group-with-select .left-side input {
+    @apply bg-transparent rounded-[0px] border-b border-[#C4C4C4] block w-full py-2 text-[32px] font-medium uppercase outline-0
+}
+.input-group-with-select .right-side {
+    @apply col-span-3 md:col-span-2
+}
+.input-group-with-select .right-side select {
+    @apply bg-transparent rounded-[0px] select-backwards border-b border-[#C4C4C4] w-full py-2 text-base font-medium uppercase outline-0
+}
+label {
+    @apply block font-semibold text-xs md:text-sm text-[#898989] mb-2 bg-transparent;
+}
+.input-group label {
+    @apply block font-semibold text-xs md:text-sm text-[#898989] mb-2;
+}
+.input-group input {
+    @apply border-b rounded-[0px] border-[#C4C4C4] block w-full py-2 text-xs md:text-sm lg:text-base placeholder:text-black focus:text-[#8000E5] focus:border-[#8000E5] font-medium uppercase outline-0 bg-transparent;
+}
+.input-group-with-transfer-select {
+    @apply grid grid-cols-12 mb-5 gap-4
+}
+.input-group-with-transfer-select .left-side,.input-group-with-transfer-select .right-side  {
+    @apply col-span-12 md:col-span-5
+}
+.input-group-with-transfer-select .middle {
+    @apply col-span-12 md:col-span-2 flex items-center justify-center
+}
+.input-group-with-transfer-select .wrapper {
+    @apply grid grid-cols-9 mb-8 items-end
+}
+.input-group-with-transfer-select .wrapper-select {
+    @apply col-span-3
+}
+.input-group-with-transfer-select .wrapper-input {
+    @apply col-span-6
+}
+.input-group-with-transfer-select .wrapper-select select {
+    @apply bg-transparent select-backwards border-b border-[#C4C4C4] w-full py-2 text-base font-medium uppercase outline-0
+}
+.input-group-with-transfer-select .wrapper-input input {
+    @apply bg-transparent rounded-[0px] text-right border-b border-[#C4C4C4] block w-full py-2 text-2xl font-semibold uppercase outline-0 text-[#060F27]
+}
+.tabs-block #tab2 .btn-black {
+    @apply mt-8
+}
+.link-violet {
+    @apply text-[#8000E5] hover:text-[#5A00A1] font-semibold font-normal cursor-pointer
+}
+.heading-wrapper-center {
+    @apply grid grid-cols-2 mb-16 items-center
+}
+.heading-wrapper-center h2 {
+    @apply !m-0
+}
+.heading-wrapper-center div:last-of-type {
+    @apply text-right ml-auto
+}
+.table-2column {
+    @apply grid grid-cols-12 md:grid-cols-2 items-center border-color-custom-gray border-b mb-5 pb-5
+}
+div.table-2column:last-of-type {
+    @apply border-0 m-0 pb-0
+}
+.table-2column .right-side {
+    @apply col-span-5 md:col-span-1 flex items-baseline justify-end
+}
+.iconbox {
+    @apply col-span-7 md:col-span-1 grid grid-cols-12 gap-2 lg:gap-0
+}
+.iconbox .img-side {
+    @apply col-span-3
+}
+.iconbox .text-side {
+    @apply col-span-9
+}
+.iconbox .text-side h3 {
+    @apply text-[#333333] text-base font-bold
+}
+.iconbox .text-side p {
+    @apply text-[#999999] font-normal text-sm
+}
+.indicator-box {
+    @apply flex items-center
+}
+.indicator-box img {
+    @apply inline mr-2
+}
+.indicator-box p {
+    @apply font-medium text-xl inline
+}
+.indicator-box p.success {
+    @apply text-[#00C058]
+}
+.image-block img {
+    @apply h-full w-full
+}
+.chart-block .chart-block-filter {
+    @apply grid grid-cols-7 xl:grid-cols-5 mb-4 items-center
+}
+.chart-block .chart-block-filter .heading {
+    @apply col-span-2
+}
+.chart-block .chart-block-filter .filters {
+    @apply text-right ml-auto col-span-5 xl:col-span-3
+}
+.chart-block .chart-block-filter .filters select:first-of-type {
+    @apply  mr-4
+}
+.chart-block select {
+    width: auto;
+}
+.select-date-icon {
+    @apply text-[#999999] font-medium text-sm flex items-center leading-4 mb-4
+}
+.select-date-icon img {
+    @apply mr-2 inline
+}
+.main-content-2column {
+    @apply grid grid-cols-2
+}
+.main-content-2column .left-side {
+    @apply col-span-2 lg:col-span-1 relative flex items-center justify-center flex-col p-4 sm:p-8 lg:p-[84px] md:pt-[120px] xl:px-[168px]
+}
+.main-content-2column .left-side .brand {
+    @apply absolute top-0 left-0 block p-4 p-[42px] lg:px-[41px] lg:py-[43px] hidden md:!block md:!visible
+}
+.main-content-2column .left-side .wrapper {
+    @apply w-full text-center
+}
+.main-content-2column .left-side .wrapper h1 {
+    @apply text-[40px] font-normal px-2 md:px-12 mb-4 text-[#333333] md:mt-16 md:mt-0
+}
+.main-content-2column .left-side .wrapper .description {
+    @apply mb-16 text-sm md:text-lg text-[#898989] font-normal
+}
+.main-content-2column .left-side .wrapper .description a {
+    @apply text-[#8000E5] font-semibold
+}
+.main-content-2column .left-side .wrapper .description span {
+    @apply text-black font-medium
+}
+.forgot-password2 .link-violet {
+    @apply font-semibold
+}
+.forgot-password2 .wrapper p:last-of-type {
+    @apply mt-12 text-lg text-[#898989] font-normal
+}
+.input-group-full {
+    @apply mt-16
+}
+.input-group-full div.select-selected,.input-group-full input {
+    @apply border-b border-[#C4C4C4] block w-full focus:text-[#8000E5] focus:border-[#8000E5] py-2 text-xs md:text-base font-medium capitalize outline-0 placeholder:text-black bg-transparent
+}
+.columns-2 {
+    @apply grid grid-cols-2 items-center
+}
+.input-group-full div.select-selected {
+    @apply text-xs md:text-base border-black
+}
+.icon-input-group {
+    position: relative;
+}
+.icon-input-group svg {
+    position: absolute;
+    right: 12px;
+    bottom: 6px;
+    cursor: pointer;
+}
+.forgot-password .icon-box,.forgot-password2 .icon-box  {
+    @apply mb-8 flex justify-center
+}
+.forgot-password .icon-box,.forgot-password2 .icon-box  {
+    @apply mb-8 flex justify-center
+}
+.forgot-password2 .description {
+    margin-bottom: 0 !important;
+}
+.btn-back-wrapper {
+    @apply flex justify-center mt-12
+}
+.btn-back-wrapper a {
+    @apply flex items-center font-semibold text-base
+}
+.btn-back-wrapper a img {
+    @apply inline mr-2
+}
+.verification-code .wrapper p:last-of-type {
+    @apply mt-12 text-sm md:text-lg text-[#898989] font-normal
+}
+.verification-code .wrapper p:last-of-type a {
+    @apply text-[#8000E5] font-semibold
+}
+.main-content-2column input {
+    @apply !border-black placeholder:text-black
+}
+.main-content-2column .right-side {
+    @apply col-span-2 lg:col-span-1
+}
+.main-content-2column .right-side img {
+    @apply h-full w-full
+}
+.radio-btn-wrapper {
+    @apply flex items-center mr-4
+}
+.radio-btn-wrapper input {
+    @apply opacity-0 absolute w-[8px] h-[8px] md:h-8 md:w-8
+}
+.radio-btn-wrapper div {
+    @apply border rounded-md border-[#C4C4C4] w-[16px] h-[16px] md:w-[22px] md:h-[22px] flex flex-shrink-0 justify-center items-center mr-2
+}
+.radio-btn-wrapper .icon-wrapper {
+    @apply border rounded-md border-[#C4C4C4] w-8 h-8 flex flex-shrink-0 justify-center items-center mr-2
+}
+.radio-btn-wrapper svg {
+    @apply fill-current hidden w-3 h-3 text-[#C4C4C4] pointer-events-none
+}
+.radio-btn-wrapper .icon-wrapper label {
+    @apply select-none text-base font-semibold
+}
+.radio-btn-wrapper label {
+    @apply mb-0 text-black
+}
+.login-page .columns-2 {
+    @apply mt-6
+}
+.login-page .columns-2 div:last-of-type{
+    @apply text-right
+}
+.login-page .columns-2 div:last-of-type a{
+    @apply font-semibold
+}
+.btn-success {
+    @apply mb-8 md:mb-0 rounded-lg mt-14 px-2 py-4 w-full bg-[#8000E5] hover:bg-[#5A00A1] text-white font-semibold text-base uppercase
+}
+/* footer */
+footer .footer-wrapper {
+    @apply px-4 sm:px-6 py-4 md:py-8 lg:px-12 lg:py-10 bg-[#333944]
+}
+footer .footer-wrapper .footer-brand {
+    @apply grid grid-cols-4 lg:grid-cols-2
+}
+footer .footer-wrapper .footer-links {
+    @apply text-right col-span-3 lg:col-span-1
+}
+.list-inline {
+    @apply md:inline-flex
+}
+.list-inline li {
+    @apply text-white text-xs md:text-sm font-normal ml-1 md:ml-8
+}
+footer hr {
+    @apply my-4 lg:my-7
+}
+footer p {
+    @apply text-white/[.56] font-medium text-xs
+}
+.content-wrapper {
+    @apply grid grid-cols-12 gap-8 mt-16;
+}
+.content-wrapper-main {
+    @apply col-span-12 lg:col-span-8 bg-white/50 rounded-[15px] px-6 py-4 lg:py-8 lg:px-32
+}
+.new-payment .content-wrapper-main {
+    @apply md:!p-12
+}
+.input-group-full-amount-half {
+    @apply grid grid-cols-12 md:gap-8 items-end mb-8 
+}
+.input-group-full-amount-half .left-side {
+    @apply col-span-8 lg:col-span-4
+}
+.input-group-full-amount-half .left-side input {
+    @apply border-b border-[#C4C4C4] block w-full py-2 text-base font-medium uppercase outline-0 bg-transparent
+}
+.input-group-full-amount-half .right-side {
+    @apply col-span-4 lg:col-span-2
+}
+.input-group-full-amount-half .right-side div.select-selected {
+    @apply bg-transparent select-backwards border-b border-black block w-full py-2 text-base font-medium uppercase outline-0
+}
+.content-wrapper-main h2 {
+    @apply font-semibold uppercase text-xl text-[#333333] mb-8
+}
+.content-wrapper-main .button-select-with-image {
+    @apply !text-black
+}
+.content-wrapper-main .btn-success {
+    @apply !mt-0
+}
+.input-group-full-amount {
+    @apply grid grid-cols-12 md:gap-8 items-end mt-8
+}
+.input-group-full-amount .left-side {
+    @apply col-span-8
+}
+.input-group-full-amount .left-side input {
+    @apply border-b border-[#C4C4C4] block w-full py-2 text-base font-medium uppercase outline-0 bg-transparent
+}
+.input-group-full-amount .right-side {
+    @apply col-span-4
+}
+.input-group-full-amount .right-side div.select-selected {
+    @apply bg-transparent select-backwards border-b border-[#C4C4C4] block w-full py-2 text-base font-medium uppercase outline-0
+}
+.content-wrapper-main label {
+    @apply !uppercase
+}
+.show-less-btn {
+    @apply text-center my-10 
+}
+.show-less-btn button {
+    @apply font-semibold text-lg
+}
+.show-less-btn button img {
+    @apply mr-3 inline
+}
+.show-more-btn {
+    @apply text-center my-10 
+}
+.show-more-btn button {
+    @apply font-semibold text-lg
+}
+.show-more-btn button img {
+    @apply mr-3 inline
+}
+.content-wrapper-main .input-group-full {
+    @apply !mt-8
+}
+.content-wrapper-sidebar {
+    @apply col-span-12 lg:col-span-4 px-6 py-4 lg:p-9 rounded-lg bg-white/50 h-full
+}
+.search-input {
+    @apply border-b border-[#000000] pb-2;
+}
+.search-input form {
+    @apply w-full flex items-center
+}
+.search-input input {
+    @apply border-[#898989] ml-2 bg-transparent text-base font-normal outline-0
+}
+.transfers-page .heading-wrapper-center {
+    @apply !mb-4
+}
+.add-icon-btn {
+    @apply !font-bold cursor-pointer text-xs md:text-base flex items-center
+}
+.add-icon-btn span {
+    @apply mr-2 md:mr-4 h-[24px] w-[25px] md:h-[45px] md:w-[45px] flex justify-center items-center bg-[#EBDCFF] rounded-full
+}
+.add-icon-btn.icon-big span {
+    @apply !w-[45px] !h-[45px]
+}
+.add-icon-btn:hover span {
+    @apply bg-[#D5B4FF]
+}
+.transfers-page .add-icon-btn,.new-payment .add-icon-btn {
+    @apply my-12
+}
+.new-payment  .content-wrapper-main {
+    @apply lg:p-8
+}
+.new-payment  input,.new-payment  select {
+    @apply !border-black
+}
+.new-payment .button-select-with-image {
+    @apply md:w-8/12 !border-black
+}
+.new-payment .btn-success {
+    @apply md:w-8/12 md:grid md:m-auto
+}
+.btn-thumbnail-icon {
+    @apply font-semibold text-sm grid grid-cols-12  items-center mb-12
+}
+.btn-thumbnail-icon .left-side {
+    @apply col-span-10
+}
+.btn-thumbnail-icon .left-side .img-box {
+    @apply flex items-center
+}
+.btn-thumbnail-icon .left-side .img-box img {
+    @apply mr-3 inline !h-[55px] !w-[55px]
+}
+.btn-thumbnail-icon .left-side .img-box p {
+    @apply break-words text-left;
+    word-spacing: 100vw;
+    white-space: pre-line;
+}
+.btn-thumbnail-icon .right-side {
+    @apply col-span-2 text-right
+}
+.btn-thumbnail-icon .right-side img {
+    @apply inline
+}
+.content-wrapper-full {
+    @apply grid grid-cols-12 mt-8 md:mt-16
+}
+.content-wrapper-full-inner {
+    @apply col-span-12 bg-white/50 rounded-lg px-4 md:px-6 py-4 lg:p-9
+}
+.content-wrapper-full-inner h2 {
+    @apply font-semibold uppercase text-lg md:text-xl text-[#333333] mb-8
+}
+.content-wrapper-full-inner h3 {
+    @apply uppercase font-semibold text-base text-[#898989]
+}
+.content-wrapper-full-inner h4 {
+    @apply text-3xl mb-8
+}
+.content-wrapper-full-inner .button-select-with-image {
+    @apply !text-black !border-black
+}
+.columns2-mobile-1 {
+    @apply grid grid-cols-2 gap-8 items-end mb-8 
+}
+.btn-with-filters {
+    @apply grid grid-cols-12 md:gap-8 items-center my-6
+}
+.btn-with-filters .left-side {
+    @apply col-span-12 xl:col-span-4
+}
+.btn-with-filters .right-side {
+    @apply col-span-12 xl:col-span-8 flex justify-center md:justify-end flex-wrap md:flex-nowrap mt-8 md:mt-0
+}
+.btn-with-filters .right-side button {
+    @apply bg-[#EEEFF1] border border-[#EEEFF1] font-medium text-xs xxl:text-sm rounded-[10px] leading-4 p-1 md:p-[10px] m-1 md:ml-2 mb-2 
+}
+.columns2-mobile-1-inner {
+    @apply col-span-2 md:col-span-1 
+}
+.filters-submit-wrapper {
+    @apply grid grid-cols-2 gap-8 items-center my-12 
+}
+.filters-submit-wrapper .left-side {
+    @apply col-span-2 md:col-span-1
+}
+.filters-submit-wrapper .left-side button {
+    @apply text-base font-semibold flex items-center
+}
+.filters-submit-wrapper .left-side button img {
+    @apply inline mr-4
+}
+.filters-submit-wrapper .right-side {
+    @apply col-span-2 md:col-span-1
+}
+.filters-submit-wrapper .right-side button {
+    @apply !mt-0 mb-0
+}
+hr {
+    @apply border-[#D7D7D7CC] mb-12
+}
+.table-top-statement {
+    @apply grid grid-cols-12 items-end
+}
+.table-top-statement .left-side {
+    @apply col-span-8 md:col-span-3
+}
+.table-top-statement .left-side p {
+    @apply text-[#898989] text-sm font-medium
+}
+.table-top-statement .right-side {
+    @apply col-span-4 md:col-span-9 text-right items-center flex justify-end
+}
+.table-top-statement .right-side button {
+    @apply ml-6
+}
+.table-statements-main {
+    @apply grid grid-cols-12 mt-10 items-center md:items-baseline
+}
+hr.table-divider {
+    @apply border-[#D7D7D7CC] my-8
+}
+.table-statements-main div:nth-child(1) {
+    @apply col-span-12 md:col-span-2
+}
+.table-statements-main div:nth-child(1) span {
+    @apply hidden md:inline md:visible mr-4 font-medium text-[10px] md:text-base
+}
+.table-statements-main div:nth-child(1) p {
+    @apply inline font-medium text-[10px] md:text-base
+}
+.table-statements-main div:nth-child(2) {
+    @apply col-span-12 md:col-span-3 flex justify-between md:justify-start
+}
+.table-statements-main div:nth-child(2) p {
+    @apply inline font-bold text-base
+}
+.table-statements-main div:nth-child(2) div {
+    @apply md:hidden
+}
+.table-statements-main div:nth-child(2) div img {
+    @apply inline mr-2
+}
+.table-statements-main div:nth-child(3) {
+    @apply col-span-12 md:col-span-3
+}
+.table-statements-main div:nth-child(3) p {
+    @apply inline font-medium text-[10px] md:text-base
+}
+.table-statements-main div:nth-child(4) {
+    @apply col-span-2 md:col-span-2 text-center hidden md:block md:visible
+}
+.table-statements-main div:nth-child(4) img {
+    @apply inline mr-2
+}
+.table-statements-main div:nth-child(4) p {
+    @apply inline font-medium text-[10px] md:text-base
+}
+.table-statements-main div:nth-child(5) {
+    @apply col-span-2 text-center md:text-right hidden md:block md:visible
+}
+.table-statements-main div:nth-child(5) p {
+    @apply text-[#8000E5] inline font-bold text-[10px] md:text-base
+}
+.table-statements-heading {
+    @apply hidden md:grid md:visible
+}
+.table-statements-heading p {
+    @apply uppercase inline !font-semibold text-[10px] md:text-base !text-[#898989]
+}
+.table-statements-heading button {
+    @apply ml-2 h-full inline
+}
+.table-statements-heading img {
+    @apply inline
+}
+.heading-with-btn {
+    @apply grid grid-cols-2 gap-4 md:gap-8 items-center mb-8
+}
+.heading-with-btn h2 {
+    @apply !mb-0
+}
+.heading-with-btn div:last-of-type {
+    @apply text-right
+}
+.cards-page .heading-with-btn button {
+    @apply ml-auto
+}
+.filter-section-2-3 {
+    @apply grid grid-cols-3 gap-8 items-end mb-8
+}
+.filter-section-2-3 .left-side {
+    @apply col-span-3 lg:col-span-1
+}
+.filter-section-2-3 .right-side {
+    @apply col-span-3 lg:col-span-2 lg:ml-auto justify-between lg:justify-end items-center flex
+}
+.inline-buttons {
+    @apply inline-block md:ml-8
+}
+.inline-buttons button {
+    @apply bg-[#EEEFF1] border border-[#EEEFF1] font-semibold text-xs md:text-sm rounded-lg p-2 px-1 md:py-3 md:px-4 md:ml-2 
+}
+.inline-icons {
+    @apply ml-2 md:ml-8 items-center flex
+}
+.inline-icons button {
+    @apply ml-6
+}
+.inline-icons button:first-of-type {
+    @apply m-0
+}
+.table-pagination {
+    @apply grid grid-cols-2 items-center mt-12
+}
+.table-pagination .left-side p {
+    @apply text-[#898989] font-medium text-sm
+}
+.table-pagination .right-side {
+    @apply text-right
+}
+.table-pagination .right-side button:last-of-type {
+    @apply ml-8
+}
+.table-pagination .right-side button img {
+    @apply inline
+}
+.cards-table {
+    @apply grid grid-cols-9 md:grid-cols-12 mt-8 md:items-center
+}
+.cards-table div:nth-child(1){
+    @apply col-span-1
+}
+.cards-table div:nth-child(2){
+    @apply col-span-4
+}
+.cards-table div:nth-child(2) p {
+    @apply inline font-bold text-[10px] md:text-base
+}
+.cards-table div:nth-child(2) p:nth-of-type(1) {
+    @apply block md:inline mt-[5px] mb-[15px] md:mb-0
+}
+.cards-table div:nth-child(2) div.items-table-mobile {
+    @apply flex items-center md:hidden
+}
+.cards-table div:nth-child(2) div.items-table-mobile p {
+    @apply !m-0
+}
+.cards-table div:nth-child(2) div div{
+    @apply inline-block mr-[8px]
+}
+.icon-success {
+    @apply inline-block bg-[#00C058] rounded-full mr-4 w-[13px] h-[13px]
+}
+.icon-platinum {
+    @apply inline-block bg-[#B880E6] rounded-full mr-4 w-[13px] h-[13px]
+}
+.icon-warning {
+    @apply inline-block bg-[#FFB700] rounded-full mr-4 w-[13px] h-[13px]
+}
+.icon-danger {
+    @apply inline-block bg-[#D80027] rounded-full mr-4 w-[13px] h-[13px]
+}
+.cards-table div:nth-child(3){
+    @apply hidden md:block md:visible col-span-3
+}
+.cards-table div:nth-child(3) p {
+    @apply inline text-[10px] md:text-base
+}
+.cards-table div:nth-child(4){
+    @apply col-span-3
+}
+.cards-table div:nth-child(4) p {
+    @apply inline font-medium text-[10px] md:text-base p-2 bg-white
+}
+.cards-table div:nth-child(4) p.platinum {
+    @apply inline rounded-lg font-medium text-[10px] md:text-base p-2 bg-[#EBDCFF]
+}
+.cards-table div:nth-child(5){
+    @apply col-span-1
+}
+.cards-table div:nth-child(5) img {
+    @apply inline
+}
+.cards-table-heading {
+    @apply mt-16 !items-center
+}
+.cards-table-heading div:nth-child(2) p {
+    @apply uppercase  inline font-semibold text-[8px] md:text-base text-[#898989] !m-0
+}
+.cards-table-heading div:nth-child(3) p {
+    @apply uppercase font-semibold text-[8px] md:text-base text-[#898989]
+}
+.cards-table-heading div:nth-child(4) {
+    @apply flex items-center
+}
+.cards-table-heading div:nth-child(4) p {
+    @apply bg-transparent uppercase inline font-semibold text-[8px] md:text-base text-[#898989] !p-0
+}
+.cards-table-heading div:nth-child(5) p {
+    @apply uppercase font-semibold text-[8px] md:text-base text-[#898989]
+}
+.message-box {
+    @apply grid grid-cols-12
+}
+.message-box-inner {
+    @apply col-span-12 bg-white-transparent py-12 md:my-0 md:min-h-screen md:h-full items-center justify-center flex flex-col text-center rounded-lg px-6 py-4 lg:p-9
+}
+.message-box-inner img {
+    @apply mb-6
+}
+.message-box-inner h2 {
+    @apply text-[#333333] text-4xl mb-6
+}
+.message-box-inner p {
+    @apply text-base mb-16 md:w-5/12
+}
+.message-box-inner a {
+    @apply rounded-lg py-4 bg-[#8000E5] text-white font-semibold text-base w-4/12 uppercase
+}
+.popup-wrapper {
+    @apply h-screen
+}
+.popup-wrapper-main {
+    @apply fixed top-[50%] left-[50%] w-[90%] md:w-5/12 items-center justify-center flex;
+    transform: translate(-50%, -50%);
+}
+.popup-wrapper-wider .popup-wrapper-main {
+    @apply md:w-7/12
+}
+.popup-wrapper-main-inner {
+    @apply relative bg-white-transparent border rounded-[15px] w-full border-white items-center justify-center flex flex-col text-center p-8 py-10;
+}
+.popup-wrapper-wider .popup-wrapper-main-inner {
+    @apply md:px-28
+}
+.popup-wrapper-main-inner .modal-close {
+    @apply absolute right-[1.5rem] top-[1.5rem]
+}
+.popup-wrapper-main-inner img {
+    @apply mb-6 mt-2
+}
+.popup-wrapper-main-inner p {
+    @apply text-base mb-8
+}
+.popup-wrapper-main-inner button.confirm {
+    @apply rounded-lg py-4 bg-[#8000E5] text-white uppercase font-semibold text-base w-6/12
+}
+.popup-btns {
+    @apply grid grid-cols-2 gap-8 w-full items-center
+}
+.popup-wrapper h2 {
+    @apply mb-8 font-semibold text-[#333333] uppercase text-xl
+}
+.popup-btns-inner {
+    @apply col-span-1
+}
+.popup-btns-inner .btn-success {
+    @apply m-0
+}
+.btn-cancel {
+    @apply hover:bg-[#D9D9D9] rounded-lg py-4 w-full border border-black bg-transparent text-black uppercase font-semibold text-base
+}
+.thumbnail-info {
+    @apply grid grid-cols-3 items-center w-full
+}
+.thumbnail-info img,.thumbnail-info p {
+    @apply m-0
+}
+.thumbnail-info .left-side {
+    @apply col-span-2
+}
+.thumbnail-info .right-side {
+    @apply col-span-1 text-right
+}
+.thumbnail-info .right-side p {
+    @apply text-[#333333] font-medium text-base
+}
+.thumbnail-box {
+    @apply  items-center
+}
+.thumbnail-box img {
+    @apply w-full max-w-[56px] inline 
+}
+.thumbnail-box p {
+    @apply text-sm md:text-xl font-semibold text-[#333333] inline ml-4
+}
+.transaction-popup hr {
+    @apply border-[#D7D7D7CC] my-4 md:my-12 w-full
+}
+.transaction-popup .popup-wrapper-main {
+    @apply md:w-6/12
+}
+.transaction-popup .popup-wrapper-main-inner {
+    @apply relative bg-white-transparent border border-white justify-center flex flex-col p-8 text-left items-baseline
+}
+.transaction-details {
+    @apply grid grid-cols-8 gap-8 md:items-baseline w-full
+}
+.transaction-details .left-side {
+    @apply col-span-8 md:col-span-4
+}
+.transaction-details .left-side p:first-of-type{
+    @apply block font-semibold uppercase text-xs text-[#898989] mb-2
+}
+.transaction-details .left-side p:last-of-type{
+    @apply text-[#333333] font-medium text-base !m-0
+}
+.transaction-details .right-side {
+    @apply col-span-8 md:col-span-4
+}
+.transaction-details-inner {
+    @apply grid grid-cols-2 gap-8
+}
+.transaction-details-inner div:first-of-type{
+    @apply text-center
+}
+.transaction-details-inner div:first-of-type p:first-of-type {
+    @apply block font-semibold uppercase text-xs text-[#898989] mb-2
+}
+.transaction-details-inner div:first-of-type img {
+    @apply inline !m-0 !mr-2
+}
+.transaction-details-inner div:first-of-type p:last-of-type {
+    @apply inline font-medium text-base
+}
+.transaction-details-inner div:last-of-type{
+    @apply text-center md:text-right
+}
+.transaction-details-inner div:last-of-type p:first-of-type{
+    @apply block font-semibold uppercase text-xs text-[#898989] mb-2
+}
+.transaction-details-inner div:last-of-type p:last-of-type{
+    @apply inline text-[#8000E5] font-medium text-base !m-0
+}
+.edit-popup .popup-wrapper-main {
+    @apply md:!w-8/12
+}
+.edit-popup input {
+    @apply border-black
+}
+.edit-popup .popup-wrapper-main-inner {
+    @apply md:px-16
+}
+.edit-popup .input-group {
+    @apply w-full text-left
+}
+.edit-popup .popup-btns {
+    @apply mt-8 w-10/12
+}
+.delete-popup .popup-wrapper-main {
+    @apply md:!w-8/12
+}
+.delete-popup .popup-wrapper-main-inner {
+    @apply md:px-28
+}
+.delete-popup .popup-wrapper-main-inner p:first-of-type {
+    @apply !font-semibold text-base !mb-0 !mt-4
+}
+.delete-popup .popup-wrapper-main-inner p:last-of-type {
+    @apply text-base mb-8 mt-2
+}
+.delete-popup .popup-btns {
+    @apply w-10/12
+}
+.fa-popup .popup-wrapper-main-inner {
+    @apply lg:px-16
+}
+.fa-popup-digits {
+    @apply items-center text-center mb-12 justify-between
+}
+.fa-popup-digits input {
+    @apply placeholder:!text-center border-b border-black w-[13%] xl:w-[17%] pb-5 text-4xl font-medium text-center uppercase outline-0 bg-transparent inline mr-4
+}
+.fa-popup-digits input:last-of-type {
+    @apply mr-0
+}
+.fa-popup .popup-btns {
+    @apply mt-4
+}
+.block-popup p {
+    @apply font-semibold mt-4
+}
+.block-popup .popup-btns {
+    @apply w-full
+}
+.block-popup .popup-wrapper-main-inner {
+    @apply md:px-16
+}
+.heading-notitle h1 {
+    @apply !hidden
+}
+.heading-notitle .select-icon {
+    @apply m-0
+}
+.heading-description-half {
+    @apply text-[#898989] text-base md:w-7/12 mb-8
+}
+.fa-digits-page {
+    @apply text-left mt-16 mb-16
+}
+.fa-digits-page input {
+    @apply w-[14%]
+}
+.fa-page .popup-btns {
+    @apply md:w-8/12
+}
+.faq-page hr {
+    @apply m-0
+}
+.accordion-main {
+    @apply md:mb-16
+}
+.accordion-main button {
+    @apply grid grid-cols-12 py-4 items-center border-b border-[#D7D7D7CC] w-full
+}
+.accordion-main button div:nth-of-type(1){
+    @apply col-span-10 text-left
+}
+.accordion-main button div:nth-of-type(1) p {
+    @apply font-medium text-[#333333] text-base
+}
+.accordion-main button div:nth-of-type(2){
+    @apply col-span-2 text-right
+}
+.accordion-main button div:nth-of-type(2) p {
+    @apply font-light text-[#333333] text-4xl
+}
+.accordion-main button div:nth-of-type(3){
+    @apply  col-span-12 text-left p-4 hidden
+}
+.accordion-main button div:nth-of-type(3) p {
+    @apply font-medium text-[#333333] text-sm
+}
+.contact-page label {
+    @apply uppercase
+}
+.contact-page input {
+    @apply capitalize
+}
+.contact-page .btn-success {
+    @apply mt-8
+}
+.page-wrapper {
+    @apply grid grid-cols-12 md:gap-16 my-6
+}
+.page-wrapper-inner {
+    @apply col-span-12 md:col-span-6
+}
+.page-wrapper-inner p.description-heading {
+    @apply text-3xl mb-8
+}
+.page-wrapper-inner p.description-paragraph {
+    @apply text-sm mb-8 text-[#898989]
+}
+.icon-description-box {
+    @apply mt-12 inline-block max-w-[70%]
+}
+.icon-description-box-main {
+    @apply grid grid-cols-11 items-center mb-8 md:mb-0
+}
+.icon-description-box-main .left-side{
+    @apply col-span-2
+}
+.icon-description-box-main .right-side{
+    @apply col-span-9
+}
+.icon-description-box-main .right-side span {
+    @apply font-medium text-[#898989] text-xs
+}
+textarea {
+    @apply border-b border-black placeholder-black block w-full py-2 text-xs md:text-base font-medium capitalize outline-0 bg-transparent
+}
+.rounded-icon-box label {
+    @apply font-semibold text-sm text-[#898989] mb-2 block mt-8
+}
+.rounded-icon-box a {
+    @apply text-[#8000E5] min-w-[70%] rounded-lg text-sm md:text-base p-2 pr-14 inline-block border border-[#D9D9D9]
+}
+.rounded-icon-box a svg {
+    @apply inline mr-2 md:mr-4
+}
+.input-group-end {
+    @apply items-end
+}
+.cards-carousel {
+    @apply pl-[25px] pr-[40px] 
+}
+.cards-carousel-inner {
+    @apply rounded-[25px] p-4 md:p-6 gradient-silver relative long-shadow flex flex-col;
+    justify-content: space-between;
+}
+.cards-carousel-inner .card-first {
+    @apply rounded-[15px] absolute h-[84%] w-[84%] bg-[#9DB3C8] left-[-25px] top-[8%] z-[-1]
+}
+.cards-carousel-inner .card-second {
+    @apply rounded-[15px] absolute h-[82%] w-[82%] bg-[#F3E4E0] right-[-25px] top-[9%] z-[-1]
+}
+.cards-carousel-inner .card-third {
+    @apply rounded-[15px] absolute h-[60%] w-[60%] bg-[#C9C992] right-[-40px] top-[20%] z-[-4]
+}
+.cards-carousel-inner img {
+    @apply mb-2 md:mb-[30px] xxl:mb-[52px] max-w-[78px]
+}
+.cards-carousel-inner hr:last-of-type {
+    @apply !mb-0
+}
+.cards-carousel-inner-details {
+    @apply grid grid-cols-2
+}
+.cards-carousel-inner-details div:first-of-type{
+    @apply border-r border-[#D7D7D7CC] pt-4
+}
+.cards-carousel-inner-details div:last-of-type{
+    @apply pl-4 pt-4
+}
+.cards-carousel-inner-details div:first-of-type p:first-of-type{
+    @apply text-[#898989] text-xs md:text-sm font-medium
+}
+.cards-carousel-inner-details div:first-of-type p:last-of-type{
+    @apply font-semibold text-xs md:text-sm
+}
+.cards-carousel-inner-details div:last-of-type p:first-of-type{
+    @apply text-[#898989] text-xs md:text-sm font-medium
+}
+.cards-carousel-inner-details div:last-of-type p:last-of-type{
+    @apply font-semibold text-xs md:text-sm
+}
+.main-navbar {
+    @apply border-gray-200 dark:bg-gray-900 dark:border-gray-700 md:hidden py-6
+}
+.main-navbar-inner {
+    @apply px-4 sm:px-6 flex flex-wrap items-center justify-between mx-auto w-full
+}
+.main-navbar-brand {
+    @apply flex items-center
+}
+.main-navbar-collapse {
+    @apply inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
+}
+.main-navbar-collapse-menu {
+    @apply w-full md:block md:w-auto
+}
+.main-navbar-collapse-menu-list {
+    @apply flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700
+}
+.main-navbar-collapse-menu-list li a {
+    @apply block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent
+}
+.statements-page .add-icon-btn {
+    @apply text-left justify-start flex items-center
+}
+.exchange-box {
+    @apply grid grid-cols-12 gap-4 items-end
+}
+.exchange-box .right-side, .exchange-box .left-side {
+    @apply col-span-12 md:col-span-5
+}
+
+.exchange-box .middle {
+    @apply col-span-12 md:col-span-2 flex align-middle justify-center
+}
+.exchange-input {
+    @apply grid grid-cols-9 items-end
+}
+.exchange-input .left-side {
+    @apply col-span-2 md:col-span-4
+}
+.exchange-input .left-side div.select-selected {
+    @apply bg-transparent select-backwards border-b border-black block w-full py-2 text-base font-medium uppercase outline-0
+}
+.exchange-input .right-side {
+    @apply col-span-7 md:col-span-5
+}
+.exchange-input .right-side input {
+    @apply bg-transparent text-right border-b border-black block w-full py-2 text-2xl font-semibold uppercase outline-0 text-[#060F27]
+}
+.new-conversion .btn-success {
+    @apply mt-6
+}
+.btn-rounded-more {
+    @apply rounded-[15px]
+}
+.conversions-page .filter-section-2-3 .left-side p {
+    @apply text-[#898989] font-semibold inline mr-4 uppercase
+}
+.conversions-page .filter-section-2-3 {
+    @apply items-center grid-cols-3
+}
+.conversions-page .filter-section-2-3 .left-side {
+    @apply col-span-3 md:col-span-1
+}
+.conversions-page .filter-section-2-3 .left-side div.select-selected {
+    @apply w-auto pr-10 inline
+}
+.conversions-page .filter-section-2-3 .right-side {
+    @apply col-span-3 md:col-span-2;
+}
+.conversions-page .filter-section-2-3 .right-side div.select-selected {
+    @apply w-auto ml-4 pr-16
+}
+.conversions-page .filter-section-2-3 .right-side .inline-icons {
+    @apply ml-2
+}
+.from-to-box {
+    @apply flex mt-16 mb-8 items-end flex-wrap md:flex-nowrap
+}
+.from-to-box div:nth-of-type(1){
+    @apply md:mr-12 !w-[40%] md:!w-auto
+}
+.from-to-box div:nth-of-type(1) button{
+    @apply mb-[4px] !font-medium
+}
+.from-to-box div:nth-of-type(2){
+    @apply md:mr-12 !w-[20%] md:!w-auto
+}
+.from-to-box div:nth-of-type(3){
+    @apply md:mr-24 !w-[40%] md:!w-auto
+}
+.from-to-box div:nth-of-type(3) button{
+    @apply mb-[4px] !font-medium
+}
+.from-to-box div:nth-of-type(2) svg{
+    @apply mb-[21px] 
+}
+.from-to-box label {
+    @apply mb-6 uppercase !font-medium
+}
+.from-to-box div:nth-of-type(4) {
+    @apply w-full md:w-auto
+}
+.from-to-box div:nth-of-type(4) button {
+    @apply !mt-8 !w-full md:!mt-0 md:w-auto
+}
+p.date-selection {
+    @apply font-medium text-[#898989] text-sm my-12
+}
+.conversions-table {
+    @apply grid grid-cols-7 md:grid-cols-8 mt-12 items-center 
+}
+.conversions-table p {
+    @apply text-xs md:text-base text-[#333333] font-medium
+}
+.conversions-table div:nth-of-type(3),.conversions-table div:nth-of-type(5),.conversions-table div:nth-of-type(6),.conversions-table div:nth-of-type(8) {
+    @apply hidden md:block md:visible
+}
+.conversions-table div:nth-of-type(1), .conversions-table div:nth-of-type(2), .conversions-table div:nth-of-type(4) {
+    @apply col-span-2 md:col-span-1
+}
+.conversions-table div:nth-of-type(2) p:nth-of-type(2),
+.conversions-table div:nth-of-type(4) p:nth-of-type(2) {
+    @apply md:hidden
+}
+.conversions-heading p {
+    @apply text-[10px] md:text-xs text-[#999999] font-semibold
+}
+.choose-card-box {
+    @apply grid grid-cols-2 gap-2 md:gap-8 items-end mb-8
+}
+.choose-card-box-inner {
+    @apply col-span-2 md:col-span-1 h-full border text-center flex flex-col rounded-[10px] border-[#D9D9D9] p-2 md:p-8 items-center justify-end cursor-pointer
+}
+.choose-card-box-inner img:last-of-type {
+    @apply cursor-pointer mb-8
+}
+.choose-card-box-inner p {
+    @apply text-lg md:text-xl font-semibold text-[#333333]
+}
+.card-ready-page {
+    @apply text-center
+}
+.card-ready-page img {
+    @apply inline-block
+}
+.card-ready-page h2 {
+    @apply text-3xl mt-12 mb-12
+}
+.app-download-icon-box {
+    @apply grid grid-cols-2 gap-8 mb-12
+}
+.app-download-icon-box .left-side {
+    @apply text-right ml-auto
+}
+.app-download-icon-box .right-side {
+    @apply text-left
+}
+.btn-back-box {
+    @apply flex justify-center
+}
+.btn-back-box a {
+    @apply flex items-center font-semibold text-base
+}
+.btn-back-box a img {
+    @apply inline mr-2
+}
+.enter-card-pin-box {
+    @apply grid grid-cols-12 md:gap-8 xl:gap-20
+}
+.enter-card-pin-box .left-side {
+    @apply col-span-12 md:col-span-5 items-center justify-center flex text-center
+}
+.enter-card-pin-box .right-side {
+    @apply col-span-12 md:col-span-7
+}
+.enter-card-pin-box label:last-of-type {
+    @apply mt-16
+}
+.enter-pin-box {
+    @apply items-center text-center md:items-start md:text-left
+}
+.enter-pin-box input {
+    @apply border-b rounded-[0px] border-[#C4C4C4] w-[10%] py-2 text-base font-medium text-center uppercase outline-0 bg-transparent inline mr-4
+}
+.get-physical-card-page .heading-wrapper-center {
+    @apply !mb-0
+}
+.get-physical-card-page .input-group-full input {
+    @apply border-black
+}
+.checkout-page-inner {
+    @apply lg:w-6/12 md:mt-28 grid m-auto
+}
+.checkout-page-inner hr {
+    @apply mb-6
+}
+.checkout-page .btn-success {
+    @apply mt-0
+}
+.checkout-page-inner-wrapper {
+    @apply grid grid-cols-5 gap-8 items-center mb-8
+}
+.checkout-page-inner-wrapper .left-side {
+    @apply col-span-2 items-center flex
+}
+.checkout-page-inner-wrapper .left-side p {
+    @apply block font-semibold text-sm text-[#898989] mb-2
+}
+.checkout-page-inner-wrapper .right-side {
+    @apply col-span-3 text-right items-center flex justify-end
+}
+.checkout-page-inner-wrapper .right-side p {
+    @apply block font-semibold text-xl mb-2
+}
+.checkout-page-inner-wrapper .right-side svg path, .checkout-page-inner-wrapper .right-side svg circle {
+    fill: #C4C4C4;
+}
+.checkout-page-inner-wrapper .right-side-second {
+    @apply col-span-3 text-right items-center flex justify-end
+}
+.checkout-page-inner-wrapper .right-side-second .inner {
+    @apply max-w-sm text-right flex flex-wrap justify-end
+}
+.checkout-page-inner-wrapper .right-side button:last-of-type {
+    @apply ml-8
+}
+.checkout-page .checkout-page-inner-wrapper:last-of-type {
+    @apply mb-3
+}
+.input-radio-main {
+    @apply flex items-center ml-8 
+}
+.input-radio-main label {
+    @apply flex items-center cursor-pointer
+}
+.input-radio-main span {
+    @apply w-4 h-4 inline-block mr-1 border border-black rounded-sm
+}
+.inline-icons-container {
+    @apply flex items-end justify-end mb-8
+}
+.card-details-main {
+    @apply grid grid-cols-12 gap-8 items-center mb-8
+}
+.card-details-main-inner {
+    @apply col-span-6 md:col-span-3
+}
+.card-details-main-inner p:first-of-type {
+    @apply block font-semibold text-sm text-[#898989] mb-4 md:mb-12
+}
+.card-details-main-inner p:last-of-type {
+    @apply text-base font-medium text-[#333333] mb-6
+}
+.card-details-main-inner:nth-of-type(2) p:last-of-type {
+    @apply font-bold
+}
+.cards-carousel-control {
+    @apply text-center mt-8
+}
+.cards-carousel-control img:first-of-type {
+    @apply inline mr-6
+}
+.cards-carousel-control img:last-of-type {
+    @apply inline ml-4
+}
+.cards-carousel-control button {
+    @apply bg-[#C4C4C4] h-[5px] w-[5px] mr-2 inline rounded-full
+}
+.active-item-carousel {
+    background-color: #8000E5 !important;
+    width: 19px !important;
+}
+.manage-cards-main-card-wrapper {
+    @apply grid grid-cols-2 gap-8 items-center mb-8
+}
+.manage-cards-main-card-wrapper .left-side {
+    @apply col-span-2 md:col-span-1
+}
+.manage-cards-main-card-wrapper .right-side {
+    @apply col-span-2 md:col-span-1 md:pl-20 items-center
+}
+.icon-text-link {
+    @apply font-semibold block cursor-pointer mb-4 md:mb-12
+}
+.icon-text-link:last-of-type {
+    @apply mb-0
+}
+.icon-text-link img {
+    @apply inline mr-4 h-[45px]
+}
+.subscriptions-page .popup-btns {
+    @apply md:w-8/12 mt-16
+}
+.subscriptions-page .popup-btns .btn-success{
+    @apply mt-0
+}
+.subscriptions-page p {
+    @apply text-[#898989] mt-20 mb-12 text-base md:w-10/12 md:inline-block
+}
+.subscriptions-page label {
+    @apply font-normal
+}
+.inbox-filters-box {
+    @apply grid grid-cols-12 md:gap-8 items-center mb-8 mt-2
+}
+.inbox-filters-box .left-side {
+    @apply md:col-span-4 items-center col-span-12 flex
+}
+.inbox-filters-box .right-side {
+    @apply md:col-span-4 col-span-12 mt-8 md:mt-0
+}
+.inbox-filters-box .left-side button:last-of-type {
+    @apply ml-10
+}
+.inbox-filters-box .left-side p {
+    @apply ml-2 text-[#999999] text-xs inline
+}
+.message-inbox-table {
+    @apply grid grid-cols-12 mt-8 items-center
+}
+.message-inbox-table div:nth-of-type(1){
+    @apply col-span-1
+}
+.message-inbox-table div:nth-of-type(2){
+    @apply col-span-3
+}
+.message-inbox-table div:nth-of-type(3){
+    @apply col-span-6
+}
+.message-inbox-table div:nth-of-type(4){
+    @apply col-span-2
+}
+.message-inbox-table div:nth-of-type(2) p {
+    @apply inline !font-bold text-[10px] md:text-base
+}
+.message-inbox-table div:nth-of-type(3) p {
+    @apply inline text-[10px] md:text-base
+}
+.message-inbox-table div:nth-of-type(4) p {
+    @apply inline text-[10px] md:text-base
+}
+.message-inbox-heading p {
+    @apply uppercase font-semibold !text-[10px] md:!text-xs text-[#898989]
+}
+.message-reply {
+    @apply grid grid-cols-12 mt-16
+}
+.message-reply-wrapper {
+    @apply relative col-span-12 min-h-full h-screen items-center justify-center flex
+}
+.message-reply-wrapper-inner {
+    @apply absolute flex items-center justify-center bg-white-transparent md:w-10/12 block rounded-lg 
+}
+.message-reply-wrapper-inner-box {
+    @apply w-full relative px-6 py-4 lg:p-9
+}
+.message-reply-wrapper-inner .close-btn {
+    @apply absolute right-[1.5rem] top-[1.5rem]
+}
+.message-reply-wrapper-inner h2 {
+    @apply uppercase mt-4 font-semibold text-xl text-[#333333]
+}
+.message-reply-wrapper-inner hr {
+    @apply mt-2 mb-2
+}
+.message-reply-wrapper-inner .table-pagination {
+    @apply mb-6
+}
+.message-reply-wrapper-inner textarea {
+    @apply text-sm bg-transparent w-full outline-none border-transparent mt-8
+}
+.message-reply-input {
+    @apply flex items-center
+}
+.message-reply-input .left-side {
+    @apply mr-2
+}
+.message-reply-input .right-side {
+    @apply pl-4 md:p-0
+}
+.message-reply-input .right-side input {
+    @apply bg-transparent block w-full py-2 text-sm font-bold outline-0 text-[#333333]
+}
+.message-reply-input .left-side label {
+    @apply inline font-medium text-sm text-[#898989]
+}
+.message-reply-input:nth-of-type(3) .right-side input {
+    @apply font-medium
+}
+.reply-btns-control {
+    @apply grid grid-cols-3 md:grid-cols-2 gap-8 items-center
+}
+.reply-btns-control div:nth-of-type(1){
+    @apply col-span-1
+}
+.reply-btns-control div:nth-of-type(2){
+    @apply col-span-2 md:col-span-1 text-right
+}
+.reply-btns-control div:nth-of-type(2) button {
+    @apply ml-4
+}
+.sub-acc-control-top {
+    @apply grid grid-cols-12 gap-4 md:gap-8 items-center my-6
+}
+.sub-acc-control-top div:nth-of-type(1){
+    @apply col-span-12 md:col-span-6
+}
+.sub-acc-control-top div:nth-of-type(1) button {
+    @apply mt-0 md:w-6/12
+}
+.sub-acc-control-top div:nth-of-type(2){
+    @apply col-span-12 md:col-span-6 md:justify-end md:flex
+}
+.filter-search {
+    @apply mt-16 flex items-center
+}
+.filter-search p {
+    @apply ml-2 text-[#999999] text-xs inline
+}
+.sub-acc-table {
+    @apply grid grid-cols-12 items-center mt-4 md:mt-8
+}
+.sub-acc-table div:nth-of-type(1) {
+    @apply col-span-1
+}
+.sub-acc-table div:nth-of-type(2) {
+    @apply col-span-3
+}
+.sub-acc-table div:nth-of-type(2) p {
+    @apply font-bold
+}
+.sub-acc-table div:nth-of-type(3) {
+    @apply col-span-6
+}
+.sub-acc-table div:nth-of-type(4) {
+    @apply col-span-2
+}
+.sub-acc-table p {
+    @apply inline font-medium text-[10px] md:text-base
+}
+.sub-acc-heading {
+    @apply mt-12
+}
+.sub-acc-heading p {
+    @apply uppercase  inline font-semibold text-[10px] md:text-xs text-[#898989]
+}
+.add-new-popup {
+    @apply grid grid-cols-12 mt-16;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.add-new-popup-wrapper {
+    @apply relative col-span-12 min-h-[50vh] lg:min-h-full lg:h-screen items-center justify-center flex
+}
+.add-new-popup-wrapper-inner {
+    @apply absolute flex items-center justify-center bg-white-transparent w-full md:w-10/12 rounded-lg
+}
+.add-new-popup-wrapper-inner-box {
+    @apply w-full relative px-6 py-8 lg:p-16
+}
+.add-new-popup-wrapper-inner-box .close-btn {
+    @apply absolute right-[1.5rem] top-[1.5rem]
+}
+.add-new-popup-wrapper-inner-box h2 {
+    @apply uppercase mt-4 font-bold text-xl mb-12
+}
+.add-new-popup-wrapper-inner-box label {
+    @apply uppercase
+}
+.add-new-popup-wrapper-inner-box input {
+    @apply capitalize border-black
+}
+.add-new-popup-wrapper-inner-box div.select-selected {
+    @apply capitalize border-black
+}
+.add-new-popup-wrapper-inner-box .popup-btns {
+    @apply w-10/12 mt-16 m-auto
+}
+.choose-acc-page .popup-btns {
+    @apply md:mt-16 md:w-6/12
+}
+.choose-acc-page h2 {
+    @apply md:mb-20
+}
+.radio-button-account {
+    @apply flex items-center mb-8
+}
+.radio-button-account label {
+    @apply flex items-center cursor-pointer border border-[#C4C4C4] rounded-lg w-full p-2 flex-col md:flex-row
+}
+.radio-button-account span:nth-of-type(1) {
+    @apply w-4 h-4 inline-block mr-1 border border-black rounded-sm
+}
+.radio-button-account span:nth-of-type(2) {
+    @apply mx-4 md:ml-6 md:mr-8 font-semibold text-base uppercase border-transparent;
+    box-shadow: none !important;
+}
+.radio-button-account span:nth-of-type(3) {
+    @apply mr-4 md:mr-8 py-1 px-2 rounded-md font-medium text-base bg-[#EBDCFF]
+}
+.radio-button-account span:nth-of-type(4) {
+    @apply mr-4 md:mr-8 font-medium text-base;
+    box-shadow: none !important;
+}
+.add-new-btn {
+    @apply mb-8 block w-full p-2 text-base font-medium rounded-lg text-center border border-[#8000E5] text-[#8000E5]
+}
+.input-group-end {
+    @apply items-end
+}
+.bank-info-page .btn-success {
+    @apply md:w-6/12 mt-4
+}
+.bank-info-page input,.bank-info-page select {
+    @apply border-black
+}
+.bank-info-page .input-group {
+    @apply mb-12
+}
+.bank-info-page h2 {
+    @apply md:mb-24
+}
+.bank-info-page label {
+    @apply uppercase
+}
+.conversions-info,.conversions-info-top {
+    @apply grid grid-cols-12 gap-8 mt-8
+}
+.conversions-info-top p {
+    @apply font-semibold text-3xl text-[#060F27]
+}
+.conversions-info-top p span {
+    @apply ml-2 font-medium text-base
+}
+.conversions-info div:nth-of-type(1),.conversions-info div:nth-of-type(2) {
+    @apply col-span-12 md:col-span-6
+}
+.conversions-info-top div:nth-of-type(1),.conversions-info-top div:nth-of-type(2) {
+    @apply col-span-12 md:col-span-6
+}
+.conversions-info div:nth-of-type(1) p {
+    @apply font-semibold text-lg text-[#060F27]
+}
+.conversions-info div:nth-of-type(2) p {
+    @apply font-semibold text-lg
+}
+.conversions-info div:nth-of-type(2) p img {
+    @apply inline mr-2
+}
+.radio-btn-text{
+    @apply flex items-center mb-4 ml-6
+}
+.radio-btn-text:first-of-type{
+    @apply ml-0
+}
+.radio-btn-text label {
+    @apply flex items-center cursor-pointer
+}
+.radio-btn-text span {
+    @apply w-4 h-4 inline-block mr-1 border border-black rounded-sm
+}
+.choose-radio-box {
+    @apply mt-8
+}
+.choose-radio-box label {
+    @apply mb-6
+}
+.choose-radio-box-inner {
+    @apply max-w-sm flex flex-wrap
+}
+.recipient-add .popup-btns {
+    @apply mt-4
+}
+.thumbnail-image-box {
+    @apply flex items-center
+}
+.thumbnail-image-box img {
+    @apply h-[56px] w-[56px] mr-8
+}
+.thumbnail-image-box p {
+    @apply text-xl font-semibold text-[#333333]
+}
+.recipient-view-details {
+    @apply grid grid-cols-12 gap-8 mt-12
+}
+.recipient-view-details div {
+    @apply col-span-4 md:col-span-3
+}
+.recipient-view-details div p:first-of-type {
+    @apply block font-semibold uppercase text-sm text-[#898989] mb-2
+}
+.recipient-view-details div p:last-of-type {
+    @apply font-medium text-base py-2
+}
+.recipient-view-details div:last-of-type p:last-of-type {
+    @apply font-medium inline-block text-base bg-[#EBDCFF] text-center px-[12px] py-[4px] rounded-lg
+}
+.recipient-view .popup-btns {
+    @apply w-full mt-12
+}
+.recipient-table {
+    @apply grid grid-cols-12 md:grid-cols-11 mt-8 items-center
+}
+.recipient-table div:nth-of-type(1){
+    @apply col-span-12 md:col-span-3 justify-between md:justify-start flex md:flex
+}
+.recipient-table div:nth-of-type(1) .thumbnail-name-box img{
+    @apply hidden md:inline md:visible
+}
+.recipient-table div:nth-of-type(1) .thumbnail-name-box p {
+    @apply text-left;
+}
+.recipient-table div:nth-of-type(1) button {
+    @apply md:hidden;
+}
+.recipient-table div:nth-of-type(2){
+    @apply col-span-12 md:col-span-2
+}
+.recipient-table div:nth-of-type(3){
+    @apply col-span-6 md:col-span-2
+}
+.recipient-table div:nth-of-type(4){
+    @apply col-span-6 text-right md:text-left md:col-span-2
+}
+.recipient-table div:nth-of-type(5){
+    @apply hidden md:block md:visible col-span-2 text-right
+}
+.thumbnail-name-box {
+    @apply flex items-center;   
+}
+.thumbnail-name-box p {
+    @apply text-[10px] inline pl-2 md:text-base font-semibold text-[#333333] text-left;   
+    padding: 0;
+    overflow-wrap: break-word;
+    text-align: left;
+    word-spacing: 100vw;
+    white-space: pre-line;
+}
+@media only screen and (max-width: 960px) {
+    .thumbnail-name-box p {
+        overflow-wrap: unset;
+        word-spacing: unset;
+    }
+}
+.thumbnail-name-box img {
+    @apply w-[28px] md:w-[56px] mr-4;
+}
+.recipient-table div:nth-of-type(2) p{
+    @apply inline font-medium text-[10px] md:text-base
+}
+.recipient-table div:nth-of-type(3) p{
+    @apply inline font-medium text-[10px] md:text-base
+}
+.recipient-table div:nth-of-type(4) p{
+    @apply inline font-medium text-[10px] md:text-base p-2 rounded-lg bg-white
+}
+.recipient-table div:nth-of-type(4) p.company{
+    @apply bg-[#EBDCFF]
+}
+.recipient-table div:nth-of-type(5) img {
+    @apply inline
+}
+.recipient-table div:nth-of-type(5) button {
+    @apply ml-4
+}
+.recipient-heading {
+    @apply hidden md:grid md:visible
+}
+.recipient-heading p {
+    @apply uppercase font-semibold text-[10px] md:text-sm text-[#898989] !bg-transparent
+}
+.swiper-slide-inner {
+    @apply md:px-2
+}
+.swiper-slide-inner a {
+    @apply text-[#898989] cursor-pointer font-semibold text-xs
+}
+.swiper-slide-inner-button {
+    @apply flex
+}
+.swiper-slide-inner-button div:nth-of-type(1) {
+    @apply text-center flex items-center
+}
+.swiper-slide-inner-button div:nth-of-type(1) span {
+    @apply border border-[#898989] text-[#898989] w-[20px] h-[20px] md:w-[30px] md:h-[30px] flex justify-center items-center  rounded-full
+}
+.swiper-slide-inner-button div:nth-of-type(2) {
+    @apply text-left flex items-center pl-2 text-[10px] md:text-xs
+}
+.swiper-divider {
+    @apply my-8
+}
+.table-spacing-desktop {
+    @apply md:px-16
+}
+.table-spacing-desktop-middle {
+    @apply items-center text-center flex flex-col
+}
+.table-spacing-desktop .input-group-full {
+    @apply md:mt-16 mt-8 mb-8 md:mb-16
+}
+.table-spacing-desktop .input-group {
+    @apply mb-8 md:mb-16
+}
+.table-spacing-desktop h2 {
+    @apply font-normal text-[#333333] text-lg md:text-3xl md:text-5xl capitalize mb-8 md:mb-16
+}
+.table-spacing-desktop input,.table-spacing-desktop select, .table-spacing-desktop .select-selected {
+    @apply border-black capitalize
+}
+.tab-half-btn {
+    @apply md:w-6/12 grid m-auto
+}
+.tab-btn-container {
+    @apply grid grid-cols-2 mt-16 gap-8 md:mt-20 md:px-16 items-center
+}
+.tab-btn-container .back-btn {
+    @apply flex justify-center items-center text-xs md:text-base
+}
+.tab-btn-container .back-btn button {
+    @apply flex items-center font-semibold text-xs md:text-base
+}
+.tab-btn-container .back-btn button img {
+    @apply inline mr-2
+}
+.tab-btn-container .btn-success {
+    @apply m-0 text-xs md:text-base
+}
+.date-input {
+    @apply relative w-full
+}
+.date-input div {
+    @apply absolute inset-y-0 left-0 flex items-center bottom-[6px] sm:bottom-0 pl-0 sm:pl-3 pointer-events-none
+}
+.date-input input {
+    @apply pl-6 md:pl-12 bg-none border-b border-black placeholder-black block w-full py-[6px] md:py-2 text-xs md:text-base font-medium capitalize outline-0 bg-transparent;
+    /*background-image: url('../img/select-arrow.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 100%;*/
+}
+@media only screen and (max-width: 600px) {
+    .date-input input {
+        background-image: none;
+    }
+}
+.input-radio-group-full {
+    @apply mb-8 md:mt-16 items-end
+}
+.input-radio-group-full-inner{
+    @apply max-w-sm flex flex-wrap
+}
+.radio-input-inner {
+    @apply flex items-center mr-6
+}
+.radio-input-inner label {
+    @apply flex items-center cursor-pointer mb-0
+}
+.radio-input-inner span {
+    @apply w-4 h-4 inline-block mr-1 border border-black rounded-sm
+}
+.input-bot-text {
+    @apply text-[10px] text-[#8000E5]
+}
+.swiper-button-next, .swiper-button-prev {
+    color: #8000E5 !important;
+}
+.swiper-button-next {
+    right: -10px !important;
+}
+.swiper-button-prev {
+    left: -10px !important;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+.payout-tab p{
+    @apply text-base mb-8
+}
+.payout-tab p:nth-of-type(1){
+    @apply mb-4
+}
+.list-dotted {
+    @apply list-disc text-base pl-6
+}
+.big-file-input {
+    @apply flex items-center justify-center w-full mt-16 text-center
+}
+.big-file-input label {
+    @apply flex flex-col items-center justify-center w-full border border-dashed rounded-lg cursor-pointer bg-transparent
+}
+.big-file-input div {
+    @apply flex flex-col items-center justify-center pt-8 pb-8
+}
+.big-file-input p {
+    @apply text-sm md:text-base font-semibold mt-4 !mb-0
+}
+.big-file-input p span {
+    @apply text-[#8000E5]
+}
+.btn-success-half {
+    @apply w-6/12 grid m-auto
+}
+.success-tab img {
+    @apply mb-6
+}
+.success-tab h2 {
+    @apply text-[#333333] text-4xl mb-6
+}
+.success-tab p {
+    @apply text-base mb-16 md:w-5/12
+}
+.swiper-wrapper {
+    @apply items-center px-[15px]
+}
+.radio-btn-wrapper-full {
+    @apply items-start
+}
+.radio-btn-wrapper-full div {
+    @apply mr-4 md:mr-8
+}
+.radio-btn-wrapper-full label {
+    @apply font-normal
+}
+.input-button-add {
+    @apply md:mt-16 mt-8
+}
+.input-button-add button {
+    @apply px-12 py-3 block text-base text-[#8000E5] rounded-lg border border-[#8000E5]
+}
+.add-details-table {
+    @apply md:mt-16 mt-8 mb-6
+}
+.add-details-table hr {
+    @apply my-4
+}
+.add-details-table-inner {
+    @apply grid grid-cols-2 gap-2 md:gap-8 items-center
+}
+.add-details-table-inner div:nth-of-type(2) {
+    @apply text-right
+}
+.add-details-table-inner p {
+    @apply text-base font-semibold
+}
+.add-details-table-inner a {
+    @apply text-[#8000E5] font-normal text-xs md:text-sm cursor-pointer
+}
+.add-details-table-inner img {
+    @apply inline ml-2 md:ml-6
+}
+.questionmark-icon {
+    @apply mt-16 pl-1 mb-2
+}
+.questionmark-icon {
+    @apply mt-16 pl-1 mb-2
+}
+.radio-btn-wrapper-full-center {
+    @apply !items-center
+}
+.btns-tab-controls {
+    @apply border border-white rounded-[10px] py-[16px] px-[13px] absolute bg-white/70 top-[-105px] right-[-10px]
+}
+.btns-tab-controls button {
+    @apply flex items-center font-semibold text-[12px] leading-[14.5px] text-[#333944] mb-[18px]
+}
+.btns-tab-controls button:last-of-type {
+    @apply !mb-0
+}
+.btns-tab-controls button svg {
+    @apply mr-[12px]
+}
+.disable-outside-clicks {
+    position: absolute;
+    top: -100vh;
+    right: -100vh;
+    bottom: -100vh;
+    left: -100vh;
+    z-index: 10000;
+}
+.active-tab-btn {
+    display: block !important;
+    visibility: visible !important;
+}
+.profile-btns {
+    @apply py-[18px] px-[15px] bg-white/70 rounded-[10px] border border-white w-auto absolute z-10 left-[4.5rem]
+}
+.profile-btns a {
+    @apply w-full flex items-center font-semibold text-[12px] leading-[14.5px] text-[#333944] mb-[21px]
+}
+.profile-btns a:last-of-type {
+    @apply mb-0
+}
+.profile-btns a svg {
+    @apply mr-[14px]
+}
+button.selected {
+    @apply border-[3px] border-[#d9d9d9]
+}
+.list-selected {
+    @apply !bg-[#DCDCDC]
+}
+.language-select {
+    @apply flex bg-white/70 border border-white p-[12px] rounded-[10px] flex-wrap absolute bottom-[5px];
+    width: 120px;
+    top: 2.25rem;
+    left: -1rem;
+    z-index: 444444444444444;
+    height: fit-content;
+}
+.language-select span {
+    @apply text-center text-[10px] leading-[12px] mr-[13px] cursor-pointer flex flex-col
+}
+.language-select span.active img {
+    @apply border-[#d9d9d9] !m-0 block
+}
+.language-select span:last-of-type {
+    @apply mr-0
+}
+.language-select img {
+    @apply border-[3px] border-transparent rounded-full !m-0 !h-[24px] !w-[24px]
+}
+.language-select div {
+    @apply items-end w-[100%] mb-2
+}
+.language-select div:last-of-type {
+    @apply mb-0
+}
+.list-selected{
+    @apply relative
+}
+.list-item-absolute {
+    @apply bg-white border border-white rounded-[10px] min-w-[239px] py-[21px] px-[14px] hidden z-20
+}
+.list-selected div.list-item-absolute {
+    @apply absolute top-[65px] !block !visible right-0
+}
+.list-item-absolute hr {
+    @apply my-[15px]
+}
+.list-item-absolute-heading {
+    @apply flex justify-between items-center mb-[28px]
+}
+.list-item-absolute-heading p {
+    @apply text-[#898989] font-semibold text-[14px] leading-[17px] m-0
+}
+.list-item-absolute-heading span {
+    @apply font-semibold bg-[#333944] rounded-[5px] text-white text-[12px] leading-[14.5px] w-[20px] h-[20px] flex items-center justify-center
+}
+.list-item-absolute-inner {
+    @apply flex justify-between mb-[7px]
+}
+.list-item-absolute-inner p {
+    @apply font-semibold text-[12px] leading-[14.6px] m-0
+}
+.list-item-absolute-inner2 {
+    @apply flex justify-between
+}
+.list-item-absolute-inner2 span {
+    @apply m-0 text-[#898989] font-medium text-[10px] leading-[12px]
+}
+.register-page {
+    @apply flex flex-wrap lg:flex-nowrap
+}
+.register-page .left-side {
+    @apply grow lg:grow-0 p-[25px] lg:max-w-[550px] md:pt-[160px] xxl:pt-[216px] md:pl-[80px] xxl:pl-[110px] md:pr-[110px] xxl:pr-[146px] md:min-h-screen;
+    background-image: url('../img/bg-register.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.register-page .left-side h1 {
+    @apply font-semibold text-[48px] leading-[58px] text-white mt-[89px] mb-[40px]
+}
+.register-page .left-side p {
+    @apply font-medium text-[18px] leading-[26px] text-white
+}
+.register-page .right-side {
+    @apply grow p-[25px] md:p-0
+}
+.register-page .right-side h2 {
+    @apply xxl:mt-[205px] md:mt-[160px] pb-[30px] mb-8 md:mb-0 md:pb-[56px] text-[40px] text-[#333333] leading-[48px] md:pl-[80px] xxl:pl-[156px] relative;
+    border-bottom: 1px solid #D7D7D7CC;
+}
+.register-page .right-side h2::after {
+    @apply bg-[#8000E5] absolute left-0 bottom-[-2px] block w-[95px] h-[4px];
+    content: '';
+}
+.register-page .right-side .input-section-container {
+    @apply md:pl-[80px] xxl:pl-[168px] md:pt-[160px] xxl:pt-[76px] md:pr-[110px] xxl:pr-[147px]
+}
+.register-page .right-side .input-section-container p {
+    @apply text-[#898989] text-[16px] leading-[26px] mb-[40px] md:mb-[81px] md:w-8/12
+}
+.register-page input {
+    @apply border-[#898989] placeholder:text-[#898989] focus:text-black !capitalize
+}
+.register-page .radio-btn-wrapper label {
+    @apply text-[#333333] font-normal
+}
+.register-page .radio-btn-wrapper label a {
+    @apply text-black font-medium underline
+}
+.input-group-mobile-full div:nth-of-type(1 ){
+    @apply col-span-2 md:col-span-1
+}
+.btn-mobile-smaller {
+    @apply !text-[0.8em] md:!text-[1em]
+}
+.checkout-page-inner-wrapper .right-side .btn-select-card-active svg path,.checkout-page-inner-wrapper .right-side .btn-select-card-active svg circle {
+    fill: #8000E5 !important;
+}
+.new-conversion .antispace-button {
+    @apply gap-0 md:gap-8 m-0
+}
+.new-conversion .antispace-button .btn-success {
+    @apply m-0
+}
+.add-icon-mobile-big {
+    @apply mb-8 md:mb-0 w-full md:w-auto bg-[#EBDCFF] md:bg-transparent rounded-[12px] justify-center md:justify-start text-center md:text-left py-3 md:p-0
+}
+.input-group-mobile-full div:nth-of-type(1), .input-group-mobile-full div:nth-of-type(2) {
+    @apply col-span-2 md:col-span-1
+}
+.input-group-mobile-nospacing {
+    @apply !mb-8 md:!mb-16
+}
